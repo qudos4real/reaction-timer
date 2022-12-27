@@ -58,8 +58,5 @@ export default {
   cursor: pointer;
   border-radius: 10px;
 }
-.btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
+
 </style>

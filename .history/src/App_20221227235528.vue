@@ -48,18 +48,4 @@ export default {
   color: #444;
   margin-top: 60px;
 }
-.btn {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-.btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
 </style>

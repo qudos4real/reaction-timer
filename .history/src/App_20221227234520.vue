@@ -1,8 +1,9 @@
 <template>
  <h1>A Reaction Timer</h1>
- <button class="btn" @click="start" v-bind:disabled="isPlaying">Play</button>
+ <button @click="start" v-bind:disabled="isPlaying">Play</button>
  <Block v-if="isPlaying" :delay="delay" @end="endGame"/>
- <Results v-if="showResult" :score="score"/>
+ <Results />
+ <p v-if="showResult">Your reaction time was {{ score }} ms</p>
 </template>
 
 <script>
@@ -20,7 +21,7 @@ export default {
       isPlaying: false,
       delay: null,
       score: null,
-      showResult: false,
+      showResult: false
     }
   },
   methods: {
@@ -47,19 +48,5 @@ export default {
   text-align: center;
   color: #444;
   margin-top: 60px;
-}
-.btn {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 10px;
-}
-.btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
 }
 </style>

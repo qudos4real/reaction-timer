@@ -8,7 +8,7 @@
 import { react } from '@babel/types';
 
 export default {
-props: ['delay',],
+props: ['delay', 'score'],
 data() {
     return {
         showBlock: false,

@@ -60,6 +60,6 @@ export default {
 }
 .btn:disabled {
   background-color: #ccc;
-  cursor: not-allowed;
+  cursor: grab;
 }
 </style>
