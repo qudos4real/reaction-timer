@@ -36,9 +36,6 @@ export default {
       this.score = reactionTime;
       this.showResult = true;
       this.resultList.push(reactionTime);
-    },
-    resetScores() {
-      this.resultList = [];
     }
   }
 }

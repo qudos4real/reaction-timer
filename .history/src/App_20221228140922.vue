@@ -2,7 +2,8 @@
  <h1>A Reaction Timer</h1>
  <button class="btn" @click="start" v-bind:disabled="isPlaying">Play</button>
  <Block v-if="isPlaying" :delay="delay" @end="endGame"/>
- <Results v-if="showResult" :score="score" :resultList="resultList" @resetScores="resetScores"/>
+ <Results v-if="showResult" :score="score"/>
+ <p v-if="isPlaying">Wait for the block to turn green</p>
 </template>
 
 <script>
@@ -35,10 +36,6 @@ export default {
       this.isPlaying = false;
       this.score = reactionTime;
       this.showResult = true;
-      this.resultList.push(reactionTime);
-    },
-    resetScores() {
-      this.resultList = [];
     }
   }
 }

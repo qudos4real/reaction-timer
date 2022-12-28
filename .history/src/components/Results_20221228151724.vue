@@ -3,9 +3,9 @@
   <p class="rank">{{ rank }}</p>
   <div v-if="resultList.length" class="prevResults">
     <p class="scores prev">Your previous scores:</p>
-    <ol reversed>
+    <ul>
       <li v-for="result in resultList" :key="result"> <strong>{{ result }} ms </strong></li>
-    </ol>
+    </ul>
     <button class="btn reset" @click="resetScores">Reset scores</button>
   </div>
 </template>
@@ -56,8 +56,8 @@ export default {
   border-radius: 5px;
   background-color: rgba(46, 172, 46, 0.727);
 }
-.prevResults > .reset:hover {
-  background-color: rgba(46, 172, 46, 0.9);
+ul {
+  list-style: decimal;
 }
 ul > li {
   margin: 5px 0;

@@ -3,7 +3,7 @@
   <p class="rank">{{ rank }}</p>
   <div v-if="resultList.length" class="prevResults">
     <p class="scores prev">Your previous scores:</p>
-    <ol reversed>
+    <ol>
       <li v-for="result in resultList" :key="result"> <strong>{{ result }} ms </strong></li>
     </ol>
     <button class="btn reset" @click="resetScores">Reset scores</button>

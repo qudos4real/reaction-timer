@@ -21,7 +21,7 @@ export default {
       delay: null,
       score: null,
       showResult: false,
-      resultList: []
+      resultList: {}
     }
   },
   methods: {
@@ -35,7 +35,8 @@ export default {
       this.isPlaying = false;
       this.score = reactionTime;
       this.showResult = true;
-      this.resultList.push(reactionTime);
+      this.resultList.push(this.score);
+      
     },
     resetScores() {
       this.resultList = [];

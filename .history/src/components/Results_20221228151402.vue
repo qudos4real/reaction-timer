@@ -1,11 +1,11 @@
 <template>
-  <p>Your reaction time was <strong>{{ score }} ms </strong></p>
+  <p>Your reaction time was {{ score }} ms</p>
   <p class="rank">{{ rank }}</p>
   <div v-if="resultList.length" class="prevResults">
-    <p class="scores prev">Your previous scores:</p>
-    <ol reversed>
-      <li v-for="result in resultList" :key="result"> <strong>{{ result }} ms </strong></li>
-    </ol>
+    <p class="scores">Your previous scores:</p>
+    <ul>
+      <li class="prev" v-for="result in resultList" :key="result">{{ result }} ms</li>
+    </ul>
     <button class="btn reset" @click="resetScores">Reset scores</button>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
     } else if (this.score < 200) {
       this.rank = "Fast Reaction!";
     } else if (this.score < 300) {
-      this.rank = "Good Reaction!";
+      this.rank = "Average Reaction!";
     } else if (this.score < 400) {
       this.rank = "Slow Reaction!";
     } else {
@@ -56,8 +56,8 @@ export default {
   border-radius: 5px;
   background-color: rgba(46, 172, 46, 0.727);
 }
-.prevResults > .reset:hover {
-  background-color: rgba(46, 172, 46, 0.9);
+ul {
+  list-style: decimal;
 }
 ul > li {
   margin: 5px 0;
