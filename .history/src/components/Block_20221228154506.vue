@@ -39,8 +39,7 @@ methods: {
 
 <style>
 .block {
-    width: 60%;
-    max-width: 400px;
+    width: 1000px;
     border-radius: 20px;
     text-align: center;
     margin: 50px auto;
